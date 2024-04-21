@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+html {
+  font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+:root {
+  --main-color: #f0f0f0;
+  --secendary-color: #151db0;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: var(--main-color);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  background-color: var(--secendary-color);
+  width: 200%;
+  height: 500px;
+  left: -100px;
+  bottom: -150px;
+  transform: rotate(5deg);
+  z-index: 1;
+}
+.parent {
+  width: 600px;
+  height: 750px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.4);
+  margin: auto;
+  z-index: 3000;
+  position: relative;
+  overflow: hidden;
+}
+.sec1 {
+  width: 100%;
+  position: relative;
+}
+.sec1 .image {
+  position: absolute;
+  width: 50%;
+  height: 220px;
+  overflow: hidden;
+  top: 0;
+  left: -30px;
+}
+.sec1 .image img {
+  width: 300px;
+  height: 220px;
+  object-fit: cover;
+  object-position: -60px;
+  border-radius: 0 0 252px 151px;
+}
+.brande {
+  width: 100%;
+  text-align: end;
+  padding: 25px;
+  padding-right: 35px;
+}
+.brande h1 {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.brand-info {
+  width: 100%;
+  background-color: var(--secendary-color);
+  padding: 15px;
+  padding-right: 30px;
+  text-align: end;
+}
+.brand-info h1{
+    font-size: 45px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.banner{
+    width: 100%;
+    height: 110px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 40px;
+    padding-block: 10px;
+    color: var(--secendary-color);
+}
+.sec2-content{
+    width: 100%;
+    background-color: #fff;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.sec2-content .left{
+    width: 40%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--secendary-color);
+    position: absolute;
+    top: -50px;
+    left: 25px;
+    padding-inline: 10PX;
+    border-radius: 2px;
+}
+.one , .two , .three {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 0;
+}
+.number{
+    width: 50px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    background-color: var(--main-color);
+}
+.info h3{
+color: var(--main-color);
+}
+.info p{
+    color: var(--main-color);
+    font-size: 14px;
+    font-style: italic;
+}
+.number h1{
+    font-size: 16px;
+}
+.sec2-content .right{
+    width: 40%;
+    height: 320px;
+    position: absolute;
+    right: 25px;
+    padding: 20px 10px;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.sec2-content .right h1{
+    font-size: 22px;
+    color: var(--secendary-color);
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.sec2-content .right h2{
+    font-size: 16px;
+    text-align: start;
+    margin-top: 12px;
+    margin-bottom: 2px;
+}
+.sec2-content .right p{
+    font-size: 16px;
+    text-align: start;
+}
+.bottom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bottom a i{
+    color: var(--secendary-color);
+    width: 20px;
+    cursor: pointer;
+}
+@media (max-width:700px){
+    .parent{
+        width: 500px;
+    }
+    .sec1 .image img {
+    width: 244px;
+    height: 220px;
+    object-fit: cover;
+    object-position: -110px;
+    border-radius: 0 0 464px 151px;}
+}
+@media (max-width:530px){
+    .parent{
+        width: 350px;
+    }
+    .sec1 .image img {
+        width: 176px;
+        height: 220px;
+        object-fit: cover;
+        object-position: -142px;
+        border-radius: 0 0 464px 151px;
+    }
+    .banner h1{
+        font-size: 16px;
+    }
+    .sec2-content .left {
+        width: 45%;
+        }
+        .sec2-content .left > div{
+            align-items: flex-start;
+
+        }
+        .sec2-content .left .number{
+            width: 27px;
+            height: 27px;
+            line-height: 27px;
+        }
+        .sec2-content .left .number h1{
+            font-size: 14px;
+        }
+        .sec2-content .left > div h3{ 
+            font-size: 14px;
+        }
+        .sec2-content .left > div p{ 
+            font-size: 12px;
+        }
+
+         .sec2-content .right h1{
+            font-size: 16px;
+         }
+        .sec2-content .right h2{
+            font-size: 14px;
+        }
+        .sec2-content .right p {
+    font-size: 12px;
+}
+.bottom .icon{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+}
+@media (max-width:400px){
+    .parent{
+        width: 300px;
+    }
+    .image {
+        width: 70%;
+
+    }
+      .sec1 .image img {
+                width: 148px;
+        height: 220px;
+        object-fit: cover;
+        object-position: -152px;
+        border-radius: 0 0 464px 151px;}
+}
